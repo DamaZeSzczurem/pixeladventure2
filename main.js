@@ -14,21 +14,16 @@ var mainState = {
         game.stage.backgroundColor = '#3598db';
         //uruchamiamy fizyke gry
         game.physics.startSystem(Phaser.Physics.ARCADE);
-        game.world.setBounds(0, 0, 1920, 1920);
+     
      
         //fizyka uruchamiana jest dla wszystkich obiektów
         game.world.enableBody= true;
-
-        this.cursor = game.input.keyboard.createCursorKeys();
-        //zmienna w której będę przechowywać dane o tym 
+//zmienna w której będę przechowywać dane o tym 
         //jaki przycisk jest wciśnięty
+        this.cursor = game.input.keyboard.createCursorKeys();
+        
         //Umiejscowienie plejera w grze
         this.player=game.add.sprite(70,100,'player');
-
-        //new Camera(game, id, x, y, width, height)
-
-        game.camera.follow(this.player.sprite);
-
         //width-szerokość
         this.player.width = 20;
         //heigt wysokość
